@@ -1,0 +1,57 @@
+<input type="checkbox" id="menu" name="">
+	
+<app-sidebardashbord></app-sidebardashbord>
+	<div class="content">
+		
+		
+			<app-navbardashbord></app-navbardashbord>
+		
+      
+		
+
+		<main>
+     
+      <div>
+        <a href="ajoutRole"> <button type="button" class="btn btn-primary btn-sm">Ajouter </button></a>
+        
+      </div>
+      <form (ngSubmit)="onSubmit()">
+			
+      <div class="row">
+        <div class="col-12">
+          <div class="form">
+            <h2>Ajouter un role</h2>
+                <div class="form-group mb-4">
+                <label for=""> Libelle :  </label>
+                <input type="text"   [(ngModel)]="role.libelle_role" name="libelle_role" class="form-control w-2" placeholder="le nom du role" aria-label="Username" aria-describedby="basic-addon1" required>
+                
+              </div>
+              
+           
+              
+              
+              
+              
+          </div>
+        </div>
+        
+      </div>
+      <button  type="submit" class="btn btn-primary btn-sm">Enregistrer</button>
+
+    </form>
+			
+							
+						
+			
+
+
+               
+				
+					
+					
+		
+
+
+  
+		</main>
+	</div>

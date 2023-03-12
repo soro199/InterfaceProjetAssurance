@@ -24,6 +24,18 @@ import { LoginComponent } from './Views/login/login.component';
 import { FooterComponent } from './Views/Acceuil/footer/footer.component';
 import { NavbarComponent } from './Views/Acceuil/navbar/navbar.component';
 import { BodyComponent } from './Views/Acceuil/body/body.component';
+import { BodydashbordComponent } from './Views/Dashbord/bodydashbord/bodydashbord.component';
+import { SidebardashbordComponent } from './Views/Dashbord/sidebardashbord/sidebardashbord.component';
+import { NavbardashbordComponent } from './Views/Dashbord/navbardashbord/navbardashbord.component';
+import { UtilisateurListeComponent } from './Views/Utilisateur/utilisateur-liste/utilisateur-liste.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ModifierUtilisateurComponent } from './Views/Utilisateur/modifier-utilisateur/modifier-utilisateur.component';
+import { AjoutPoliceComponent } from './Views/Police/Ajoute/ajout-police/ajout-police.component';
+import { ListPoliceComponent } from './Views/Police/Liste/list-police/list-police.component';
+import { ListRoleComponent } from './Views/Role/Liste/list-role/list-role.component';
+import { AjoutRoleComponent } from './Views/Role/Ajout/ajout-role/ajout-role.component';
+
 
 @NgModule({
   declarations: [
@@ -46,12 +58,24 @@ import { BodyComponent } from './Views/Acceuil/body/body.component';
     LoginComponent,
     FooterComponent,
     NavbarComponent,
-    BodyComponent
+    BodyComponent,
+    BodydashbordComponent,
+    SidebardashbordComponent,
+    NavbardashbordComponent,
+    UtilisateurListeComponent,
+    ModifierUtilisateurComponent,
+    AjoutPoliceComponent,
+    ListPoliceComponent,
+    ListRoleComponent,
+    AjoutRoleComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    RouterModule
   ],
   providers: [UtilisateurServiceService],
   bootstrap: [AppComponent]

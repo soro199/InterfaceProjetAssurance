@@ -1,0 +1,79 @@
+<input type="checkbox" id="menu" name="">
+	
+<app-sidebardashbord></app-sidebardashbord>
+	<div class="content">
+		
+		
+			<app-navbardashbord></app-navbardashbord>
+		
+      
+		
+
+		<main>
+     
+      <div>
+        <a href="/ajoutPolice"> <button type="button" class="btn btn-primary btn-sm">Ajouter </button></a>
+        
+      </div>
+      <form (ngSubmit)="onSubmit()">
+			
+      <div class="row">
+        <div class="col-12">
+          <div class="form">
+            <h2>Ajouter un police</h2>
+                <div class="form-group mb-4">
+                <label for=""> Type De la police:  </label>
+                <select   [(ngModel)]="police.typePolice"  name="typePolice" class="form-control"  id="" required>
+                  <option value="Maison" disabled> faite un choix</option>
+                  <option  value="Masculin">Maison</option>
+                  <option value="Feminin">enfant</option>
+
+
+                 </select>
+                
+              </div>
+              
+              <div class="form-group mb-4">
+                <label>Montant de la police</label>
+                <input type="number" class="form-control w-2"  [(ngModel)]="police.montantPrime"   name="montantPrime" placeholder="montant de la police" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                
+              </div>
+              
+              <div class="form-group mb-4">
+              
+                
+                <label> Description de la police</label>            
+                  <input type="text"  [(ngModel)]="police.description_police"   name="description_police" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                  
+
+                
+                
+              </div>
+              
+              
+              
+              
+              
+          </div>
+        </div>
+        
+      </div>
+      <button  type="submit" class="btn btn-primary btn-sm">Enregistrer</button>
+
+    </form>
+			
+							
+						
+			
+
+
+               
+				
+					
+					
+		
+
+
+  
+		</main>
+	</div>

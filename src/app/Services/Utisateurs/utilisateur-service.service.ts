@@ -13,15 +13,34 @@ export class UtilisateurServiceService {
   constructor(private http:HttpClient) {   }
 
     public getUtilisateur():Observable<Utilisateur[]>{ 
-      return this.http.get<Utilisateur[]>(this.urlServeurApi+"/listeUtilisateur"); 
-
-
-      
-  
+      return this.http.get<Utilisateur[]>(this.urlServeurApi+"/listeUtilisateur");
 
 
 
+  }
 
+  public createUtilisateur(user: Utilisateur){
+
+
+    return this.http.post(this.urlServeurApi+"/ajout/utilisateur",user);
+  }
+
+  public UpdateUtilisateur(user: Utilisateur){
+
+
+    return this.http.put(this.urlServeurApi+"/updateUtilisateur/",user);
+  }
+
+  public getfirstUtilisateur(id: number){
+
+    return this.http.get(this.urlServeurApi+"/afficherUtilisateur/"+id);
+  }
+
+
+  public deletfirstUtilisateur(id: number){
+
+
+    return this.http.delete(this.urlServeurApi+"/deleteUtilisateur/"+id);
   }
 
 }
