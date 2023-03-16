@@ -15,9 +15,7 @@ export class UtilisateurServiceService {
     public getUtilisateur():Observable<Utilisateur[]>{ 
       return this.http.get<Utilisateur[]>(this.urlServeurApi+"/listeUtilisateur");
 
-
-
-  }
+     }
 
   public createUtilisateur(user: Utilisateur){
 

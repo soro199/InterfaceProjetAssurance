@@ -15,7 +15,7 @@
         <a href="creationutilisateur"> <button type="button" class="btn btn-primary btn-sm">Ajouter </button></a>
         
       </div>
-      <form (ngSubmit)="onSubmit()">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()" >
 			
       <div class="row">
         <div class="col-12">
@@ -23,25 +23,25 @@
             <h2>Ajouter un client</h2>
                 <div class="form-group mb-4">
                 <label for=""> Nom :  </label>
-                <input type="text"   [(ngModel)]="user.nom" name="nom" class="form-control w-2" placeholder="Nom" aria-label="Username" aria-describedby="basic-addon1" required>
+                <input type="text"   formControlName="nom" name="nom" class="form-control w-2" placeholder="Nom" aria-label="Username" aria-describedby="basic-addon1" required>
                 <label for=""> Prénoms :  </label>
-                <input type="text"  [(ngModel)]="user.prenoms" name="prenoms" class="form-control w-2" placeholder="prenoms" aria-label="Username" aria-describedby="basic-addon1" required>
+                <input type="text"  formControlName="prenoms" name="prenoms" class="form-control w-2" placeholder="prenoms" aria-label="Username" aria-describedby="basic-addon1" required>
               </div>
               
               <div class="form-group mb-4">
                 <label>Date de naissance</label>
-                <input id="date" class="form-control w-2"  [(ngModel)]="user.dteNaissance"   name="dteNaissance" placehlder="YYYY-MM-DD" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                <input id="date" class="form-control w-2"  formControlName="dteNaissance"   name="dteNaissance" placehlder="YYYY-MM-DD" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                 <label>Lieu de naissance</label>
-                <input type="text" class="form-control"   [(ngModel)]="user.lieuNaissance" placeholder="Lieu de naissance"    name="lieuNaissance" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                <input type="text" class="form-control"   formControlName="lieuNaissance" placeholder="Lieu de naissance"    name="lieuNaissance" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
               </div>
               
               <div class="form-group mb-4">
               
                 
                 <label> Profession</label>            
-                  <input type="text"  [(ngModel)]="user.profession"   name="profession" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                  <input type="text"    formControlName="profession" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                   <label> Situation Matrimoniale</label>
-                  <select   [(ngModel)]="user.situationMatrimoniale"  name="situationMatrimoniale" class="form-control"  id="" required>
+                  <select    formControlName="situationMatrimoniale" class="form-control"  id="" required>
                    <option  value="Masculin">Masculin</option>
                    <option value="Feminin">Feminin</option>
 
@@ -50,8 +50,8 @@
 
 
                   <label> Role *</label>
-                  <select    [(ngModel)]="user.role_id"  name="role_id" class="form-control"   required>
-                    
+                  <select     formControlName="role" class="form-control" id="role"  required>
+                   
                    <option  *ngFor="let roles of role" [value]="roles.id"  >{{roles.libelle_role}}</option>
                    
                     
@@ -63,11 +63,11 @@
               
               <div class="form-group mb-4">
                 <label for="">Email</label>
-                <input  name="email" [(ngModel)]="user.email" type="email"   class="form-control" required>
+                <input  name="email" formControlName="email" type="email"   class="form-control" required>
                 <label for="">Numero de telephone</label>
-                <input  name="tel" type="number" [(ngModel)]="user.tel"  class="form-control" required >
+                <input  name="tel" type="number" formControlName="tel"  class="form-control" required >
                 <label for="">Password</label>
-                <input  name="mdp" [(ngModel)]="user.mdp"  type="password" class="form-control" >
+                <input  name="mdp" formControlName="mdp"  type="password" class="form-control" >
                 
               </div>
               

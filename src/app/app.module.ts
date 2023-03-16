@@ -28,13 +28,14 @@ import { BodydashbordComponent } from './Views/Dashbord/bodydashbord/bodydashbor
 import { SidebardashbordComponent } from './Views/Dashbord/sidebardashbord/sidebardashbord.component';
 import { NavbardashbordComponent } from './Views/Dashbord/navbardashbord/navbardashbord.component';
 import { UtilisateurListeComponent } from './Views/Utilisateur/utilisateur-liste/utilisateur-liste.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ModifierUtilisateurComponent } from './Views/Utilisateur/modifier-utilisateur/modifier-utilisateur.component';
 import { AjoutPoliceComponent } from './Views/Police/Ajoute/ajout-police/ajout-police.component';
 import { ListPoliceComponent } from './Views/Police/Liste/list-police/list-police.component';
 import { ListRoleComponent } from './Views/Role/Liste/list-role/list-role.component';
 import { AjoutRoleComponent } from './Views/Role/Ajout/ajout-role/ajout-role.component';
+import { ListePaiementComponent } from './Views/Paiement/liste-paiement/liste-paiement.component';
 
 
 @NgModule({
@@ -68,6 +69,7 @@ import { AjoutRoleComponent } from './Views/Role/Ajout/ajout-role/ajout-role.com
     ListPoliceComponent,
     ListRoleComponent,
     AjoutRoleComponent,
+    ListePaiementComponent
   
   ],
   imports: [
@@ -75,7 +77,9 @@ import { AjoutRoleComponent } from './Views/Role/Ajout/ajout-role/ajout-role.com
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+  
+    ReactiveFormsModule
   ],
   providers: [UtilisateurServiceService],
   bootstrap: [AppComponent]

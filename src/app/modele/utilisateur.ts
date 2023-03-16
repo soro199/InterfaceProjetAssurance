@@ -12,7 +12,7 @@ export class Utilisateur{
 	 lieuNaissance?:string;
 	 profession?:string;
 	 situationMatrimoniale?:string;
-	 role_id?:number;
+	 role?:Role ;
 	 
 	 
 	 

@@ -1,1 +1,88 @@
-<p>creation-paiement works!</p>
+<input type="checkbox" id="menu" name="">
+	
+<app-sidebardashbord></app-sidebardashbord>
+	<div class="content">
+		
+		
+			<app-navbardashbord></app-navbardashbord>
+		
+      
+		
+
+		<main>
+     
+      <div>
+        <a href="ajoutPaiement"> <button type="button" class="btn btn-primary btn-sm">Ajouter </button></a>
+        
+      </div>
+      <form [formGroup]="paiementForm" (ngSubmit)="onSubmit()" >
+			
+      <div class="row">
+        <div class="col-12">
+          <div class="form">
+            <h2>Faire un payement</h2>
+                <div class="form-group mb-4">
+                <label for=""> Montant :  </label>
+                <input type="text"   formControlName="montant" name="montant" class="form-control w-2" placeholder="Montant" aria-label="Username" aria-describedby="basic-addon1" required>
+                
+              </div>
+              
+              <div class="form-group mb-4">
+                <label>Date de payement</label>
+                <input id="date" class="form-control w-2"  formControlName="datePaiement"   name="datePaiement" placehlder="YYYY-MM-DD" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                
+              </div>
+              
+              <div class="form-group mb-4">
+              
+                
+                
+                  <label> Mode payement</label>
+                  <select    formControlName="modePaiement" class="form-control"  id="" required>
+                   <option  value="Mtn">Mtn</option>
+                   <option value="Orange">Orange</option>
+                   <option value="Moov">Moov</option>
+
+
+                  </select>
+
+
+                  <label> Utilisateur *</label>
+                  <select     formControlName="utilisateur" class="form-control" id="utilisateur"  required>
+                   
+                   <option  *ngFor="let utilisateurs of utilisateur" [value]="utilisateurs.id"  >{{utilisateurs.nom+' '+utilisateurs.prenoms}}</option>
+                   
+                    
+
+                  </select>
+                
+                
+              </div>
+              
+              
+              
+              
+              
+          </div>
+        </div>
+        
+      </div>
+      <button  type="submit" class="btn btn-primary btn-sm">Enregistrer</button>
+
+    </form>
+			
+							
+						
+			
+
+
+               
+				
+					
+					
+		
+
+
+  
+		</main>
+	</div>
