@@ -14,6 +14,7 @@ export class UtilisateurListeComponent {
 
 
   user:any= [];
+  
 
   constructor (private UserApi:UtilisateurServiceService, private router:Router){}
 
@@ -51,12 +52,12 @@ export class UtilisateurListeComponent {
 
   modifierUtilisateur(id:number){
    
-    this.router.navigate(['/modifierUtilisateur',id]);
+    this.router.navigate(['modifierUtilisateur',id]);
   }
 
 
   getfirstUtilisateur(id:number){
-    this.router.navigate(['/detailUtilisateur',id]);
+    this.router.navigate(['detailUtilisateur',id]);
 
 
 

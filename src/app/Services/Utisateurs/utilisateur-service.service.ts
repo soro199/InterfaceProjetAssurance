@@ -23,10 +23,10 @@ export class UtilisateurServiceService {
     return this.http.post(this.urlServeurApi+"/ajout/utilisateur",user);
   }
 
-  public UpdateUtilisateur(user: Utilisateur){
+  public UpdateUtilisateur(id:number,user: Utilisateur){
 
 
-    return this.http.put(this.urlServeurApi+"/updateUtilisateur/",user);
+    return this.http.put(`${this.urlServeurApi+"/updateUtilisateur"}/${id}`,user);
   }
 
   public getfirstUtilisateur(id: number){

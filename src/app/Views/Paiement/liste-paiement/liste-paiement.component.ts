@@ -23,7 +23,12 @@ export class ListePaiementComponent {
             this.paiementService.getPaiement().subscribe(
 
               (donne:Paiement[])=>{
+
+
+                
                       console.log(donne); 
+
+
                 this.paiement= donne; 
                 
               },
@@ -68,6 +73,13 @@ export class ListePaiementComponent {
 
   getfirstPaiement(id:number){
     this.router.navigate(['/detailPaiement',id]);
+
+
+
+  }
+
+  getfirstUtilisateur(id:number){
+    this.router.navigate(['detailUtilisateur',id]);
 
 
 

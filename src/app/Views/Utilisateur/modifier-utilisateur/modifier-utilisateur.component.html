@@ -1,1 +1,98 @@
-<p>modifier-utilisateur works!</p>
+<input type="checkbox" id="menu" name="">
+	
+<app-sidebardashbord></app-sidebardashbord>
+	<div class="content">
+		
+		
+			<app-navbardashbord></app-navbardashbord>
+		
+      
+		
+
+		<main>
+     
+      <div>
+       
+        
+      </div>
+      <form   (ngSubmit)="onSubmit()" >
+			
+      <div class="row">
+        <div class="col-12">
+          <div class="form">
+            <h2>Ajouter un client</h2>
+                <div class="form-group mb-4">
+                <label for=""> Nom :  </label>
+                <input type="text"   [(ngModel)]="user.nom" name="nom" class="form-control w-2" placeholder="Nom" aria-label="Username" aria-describedby="basic-addon1" required>
+                <label for=""> Prénoms :  </label>
+                <input type="text"  [(ngModel)]="user.prenoms" name="prenoms" class="form-control w-2" placeholder="prenoms" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+              
+              <div class="form-group mb-4">
+                <label>Date de naissance</label>
+                <input id="date" class="form-control w-2"  [(ngModel)]="user.dteNaissance"   name="dteNaissance" placehlder="YYYY-MM-DD" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                <label>Lieu de naissance</label>
+                <input type="text" class="form-control"  [(ngModel)]="user.lieuNaissance" placeholder="Lieu de naissance"    name="lieuNaissance" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+              </div>
+              
+              <div class="form-group mb-4">
+              
+                
+                <label> Profession</label>            
+                  <input type="text"   [(ngModel)]="user.profession" name="profession" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                  <label> Situation Matrimoniale</label>
+                  <select    [(ngModel)]="user.situationMatrimoniale" class="form-control"  id="" required>
+                   <option  value="Masculin">Masculin</option>
+                   <option value="Feminin">Feminin</option>
+
+
+                  </select>
+
+
+                  <label> Role *</label>
+                  <select     [(ngModel)]="user.role"  name ="role" class="form-control" id="role"  required>
+                   
+                   <option  *ngFor="let roles of role" [value]="roles.id"  >{{roles.libelle_role}}</option>
+                   
+                    
+
+                  </select>
+                
+                
+              </div>
+              
+              <div class="form-group mb-4">
+                <label for="">Email</label>
+                <input  name="email" [(ngModel)]="user.email" type="email"   class="form-control" required>
+                <label for="">Numero de telephone</label>
+                <input  name="tel" type="number" [(ngModel)]="user.tel"  class="form-control" required >
+                <label for="">Password</label>
+                <input  name="mdp" [(ngModel)]="user.mdp"  type="password" class="form-control" >
+                
+              </div>
+              
+              
+              
+          </div>
+        </div>
+        
+      </div>
+      <button  type="submit" class="btn btn-primary btn-sm">Enregistrer</button>
+
+    </form>
+			
+							
+						
+			
+
+
+               
+				
+					
+					
+		
+
+
+  
+		</main>
+	</div>

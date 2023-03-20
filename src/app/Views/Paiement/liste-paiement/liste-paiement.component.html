@@ -42,7 +42,11 @@
                                         <td>{{paie.datePaiement}}</td>
                                         <td>{{paie.montant}}</td>
                                         <td>{{paie.modePaiement}}</td>
-                                        <td>{{paie.utilisateur}</td>
+                                        <td>
+
+                                          <button type="button"  (click)="getfirstUtilisateur(paie.utilisateur)" class="btn btn-secondary btn-sm">Voir l'utilisateur</button>
+
+                                        </td>
                                         
                                         <td>
 

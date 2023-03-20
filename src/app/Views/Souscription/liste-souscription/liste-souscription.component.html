@@ -11,13 +11,13 @@
 
 		<main>
       <div>
-        <a href="creationutilisateur"> <button type="button" class="btn btn-primary btn-sm">Ajouter </button></a>
+        <a href="creationSouscription"> <button type="button" class="btn btn-primary btn-sm">Ajouter </button></a>
         
       </div>
 			
 
 			
-							<h2>Listes des utilisateurs</h2>
+							<h2>Listes des souscriptions</h2>
 							
 						
 						<div class="body-case">
@@ -26,36 +26,37 @@
                                     <thead>
                                       <tr>
                                         <th >#</th>
-                                        <th scope="col">Nom</th>
-                                        <th scope="col">Prenoms</th>
-                                        <th scope="col">lieu de naissance</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">profession</th>
-                                        <th scope="col">Situation Matrimoniale</th>
-                                        <th scope="col">Contact</th>
-                                        <th scope="col">Role</th>
+                                        <th scope="col">Date de souscription</th>
+                                        <th scope="col">Date de debut</th>
+                                        <th scope="col">Date de fin</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Police</th>
+                                        <th scope="col">Personne</th>
+                                      
                                         <th scope="col">Action</th>
                                         
                                       </tr>
                                     </thead>
                                     <tbody>
                                       
-                                      <tr *ngFor="let use of user">
-                                        <th scope="row">{{use.id}}</th>
-                                        <td>{{use.nom}}</td>
-                                        <td>{{use.prenoms}}</td>
-                                        <td>{{use.lieuNaissance}}</td>
-                                        <td>{{use.email}}</td>
-                                        <td>{{use.profession}}</td>
-                                        
-                                        <td>{{use.situationMatrimoniale}}</td>
-                                        <td>{{use.tel}}</td>
-                                        <td>{{use.role.libelle_role}}</td>
+                                      <tr *ngFor="let souscription of souscription">
+                                        <th scope="row">{{souscription.id}}</th>
+                                        <td>{{souscription.date_souscription}}</td>
+                                        <td>{{souscription.dateDebut}}</td>
+                                        <td>{{souscription.dateFin}}</td>
+                                        <td>{{souscription.description}}</td>
+                                        <td>{{souscription.police}}</td>
+
                                         <td>
 
-                                            <button type="button" (click)="modifierUtilisateur(use.id)"   class="btn btn-primary btn-sm">Modifier</button>
-                                            <button type="button"  (click)="deleteOneUtilisateur(use.id)"     class="btn btn-primary btn-sm" style="background-color: red;">Supprimer</button>
-                                            <button type="button"  (click)="getfirstUtilisateur(use.id)" class="btn btn-secondary btn-sm">Voir+</button>
+
+                                          <button type="button"  (click)="getfirstUtilisateur(souscription.utilisateur)" class="btn btn-secondary btn-sm">Voir l'utilisateur</button>
+                                        </td>
+         
+                                        <td>
+
+                                            <button type="button" (click)="modifierSouscription(souscription.id)"   class="btn btn-primary btn-sm">Modifier</button>
+                                            <button type="button"  (click)="deleteOneSouscription(souscription.id)"     class="btn btn-primary btn-sm" style="background-color: red;">Supprimer</button>
 
 
                                         </td>

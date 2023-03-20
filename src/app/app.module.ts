@@ -36,6 +36,9 @@ import { ListPoliceComponent } from './Views/Police/Liste/list-police/list-polic
 import { ListRoleComponent } from './Views/Role/Liste/list-role/list-role.component';
 import { AjoutRoleComponent } from './Views/Role/Ajout/ajout-role/ajout-role.component';
 import { ListePaiementComponent } from './Views/Paiement/liste-paiement/liste-paiement.component';
+import { CreationSouscriptionComponent } from './Views/Souscription/creation-souscription/creation-souscription.component';
+import { ModificationSouscriptionComponent } from './Views/Souscription/modification-souscription/modification-souscription.component';
+import { ListeSouscriptionComponent } from './Views/Souscription/liste-souscription/liste-souscription.component';
 
 
 @NgModule({
@@ -69,7 +72,10 @@ import { ListePaiementComponent } from './Views/Paiement/liste-paiement/liste-pa
     ListPoliceComponent,
     ListRoleComponent,
     AjoutRoleComponent,
-    ListePaiementComponent
+    ListePaiementComponent,
+    CreationSouscriptionComponent,
+    ModificationSouscriptionComponent,
+    ListeSouscriptionComponent
   
   ],
   imports: [
