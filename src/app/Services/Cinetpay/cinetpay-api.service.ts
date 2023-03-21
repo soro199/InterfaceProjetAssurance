@@ -38,19 +38,24 @@ export class CinetpayApiService {
         customer_zip_code : "06510", // code postal
 
     });
-   /* CinetPay.waitResponse(function(data) {
+/*
+   CinetPay.waitResponse().subscribe((data: { status: string; })=>{
         if (data.status == "REFUSED") {
             alert("Votre paiement a échoué")
                 window.location.reload();
+                
             
         } else if (data.status == "ACCEPTED") {
             alert("Votre paiement a été effectué avec succès")
                 window.location.reload();
-            }
+            
         }
-    });
-    CinetPay.onError(function(data) {
-        console.log(data);
+
     });*/
+
+    // CinetPay.onError(function(data) {
+    //     console.log(data);
+    // });
+
 }
 }
